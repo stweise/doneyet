@@ -19,7 +19,7 @@ GTEST_LIBS = libgtest.a libgtest_main.a
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
-TESTS = dummy_unittest
+TESTS = dummy_unittest note_unittest
 
 # All Google Test headers.  Usually you shouldn't change this
 # definition.
@@ -69,4 +69,18 @@ dummy_project_unittest.o : $(USER_DIR)/dummy_project_unittest.cc \
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/dummy_project_unittest.cc
 
 dummy_unittest: dummy_project.o dummy_project_unittest.o $(GTEST_LIBS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
+
+date.o : $(USER_DIR)/date.cc $(USER_DIR)/date.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/date.cc
+note.o : $(USER_DIR)/note.cc $(USER_DIR)/note.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/note.cc
+serializer.o : $(USER_DIR)/serializer.cc $(USER_DIR)/serializer.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/serializer.cc
+
+note_unittest.o : $(USER_DIR)/note_unittest.cc \
+                     $(USER_DIR)/note.h $(GTEST_HEADERS)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/note_unittest.cc
+
+note_unittest: note.o date.o serializer.o note_unittest.o $(GTEST_LIBS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
