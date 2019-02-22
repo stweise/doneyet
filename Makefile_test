@@ -71,13 +71,6 @@ dummy_project_unittest.o : $(USER_DIR)/dummy_project_unittest.cc \
 dummy_unittest: dummy_project.o dummy_project_unittest.o $(GTEST_LIBS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -L$(GTEST_LIB_DIR) -lgtest_main -lpthread $^ -o $@
 
-date.o : $(USER_DIR)/date.cc $(USER_DIR)/date.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/date.cc
-note.o : $(USER_DIR)/note.cc $(USER_DIR)/note.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/note.cc
-serializer.o : $(USER_DIR)/serializer.cc $(USER_DIR)/serializer.h $(GTEST_HEADERS)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/serializer.cc
-
 note_unittest.o : $(USER_DIR)/note_unittest.cc \
                      $(USER_DIR)/note.h $(GTEST_HEADERS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $(USER_DIR)/note_unittest.cc
