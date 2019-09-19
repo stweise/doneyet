@@ -2,6 +2,7 @@
 #include <map>
 #include "hierarchical-list.h"
 #include "utils.h"
+#include "serializer.h"
 
 using std::map;
 

@@ -1,4 +1,5 @@
 #include "note.h"
+#include "serializer.h"
 
 Note::Note(const string& text) {
   text_ = text;

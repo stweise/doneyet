@@ -7,10 +7,13 @@
 #include <vector>
 #include "curses-menu.h"
 #include "hierarchical-list.h"
-#include "project.h"
 
 using std::string;
 using std::vector;
+
+class Task;
+class Project;
+class MenuBar;
 
 #define __HELPTEXT__                                                         \
   "* A - Apply the Show All Tasks filter.\n"                                 \

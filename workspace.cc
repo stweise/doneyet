@@ -12,6 +12,7 @@
 #include "list-chooser.h"
 #include "serializer.h"
 #include "utils.h"
+#include "project.h"
 
 static bool do_resize;
 

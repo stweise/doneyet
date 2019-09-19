@@ -1,5 +1,7 @@
 #include "list-chooser.h"
+#include "utils.h"
 #include <stdlib.h>
+#include "curses-menu.h"
 
 string ListChooser::GetChoiceWithOptions(const vector<string>& choices,
                                          const string& message, int fg_color,

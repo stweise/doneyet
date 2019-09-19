@@ -4,7 +4,6 @@
 #include <menu.h>
 #include <string>
 #include <vector>
-#include "utils.h"
 
 using std::string;
 using std::vector;

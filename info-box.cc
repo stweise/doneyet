@@ -1,4 +1,5 @@
 #include "info-box.h"
+#include "utils.h"
 
 void draw_borders(WINDOW* screen) {
   int x, y, i;

@@ -3,7 +3,8 @@
 
 #include <string>
 #include "date.h"
-#include "serializer.h"
+
+class Serializer;
 
 class Note {
  public:

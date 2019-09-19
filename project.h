@@ -3,16 +3,17 @@
 
 #include <fstream>
 #include <iostream>
-#include <string>
 #include <vector>
-#include "filter-predicate.h"
-#include "serializer.h"
+#include <ostream>
 #include "task.h"
+#include "filter-predicate.h"
 
 using std::ifstream;
 using std::ofstream;
 using std::string;
 using std::vector;
+
+class Serializer;
 
 class Project : public HierarchicalListDataSource {
  public:

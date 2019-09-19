@@ -1,4 +1,5 @@
 #include "dialog-box.h"
+#include "utils.h"
 
 string DialogBox::RunMultiLine(const string& title, const string& default_text,
                                int width, int height) {

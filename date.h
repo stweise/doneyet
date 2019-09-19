@@ -3,10 +3,10 @@
 
 #include <ctime>
 #include <string>
-#include "serializer.h"
 
 using std::string;
 using std::time_t;
+class Serializer;
 
 class Date {
  public:

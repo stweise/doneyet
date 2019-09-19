@@ -4,23 +4,22 @@
 // TODO: Swap(Task*, Task*) is still a bit flakey if the tasks are in the
 // "wrong" order.  Fix that.
 
-#include <ncurses.h>
-#include <ctime>
 #include <fstream>
 #include <iostream>
 #include <map>
-#include <string>
 #include <vector>
 #include "date.h"
-#include "filter-predicate.h"
 #include "hierarchical-list.h"
-#include "note.h"
-#include "serializer.h"
+#include "filter-predicate.h"
 
 using std::map;
 using std::ofstream;
+using std::ostream;
 using std::string;
 using std::vector;
+
+class Note;
+class Serializer;
 
 typedef enum TaskStatus_ {
   CREATED,
