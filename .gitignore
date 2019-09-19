@@ -1,5 +1,7 @@
 doneyet
+*_unittest
 *.o
+*.a
 *.gcov
 *.gcno
 *.gcda
