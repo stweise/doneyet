@@ -1,4 +1,7 @@
 #include "dialog-box.h"
+#include <form.h>
+#include <math.h>
+#include <ncurses.h>
 #include "utils.h"
 
 string DialogBox::RunMultiLine(const string& title, const string& default_text,

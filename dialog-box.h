@@ -1,9 +1,6 @@
 #ifndef DIALOG_BOX_H_
 #define DIALOG_BOX_H_
 
-#include <form.h>
-#include <math.h>
-#include <ncurses.h>
 #include <string>
 
 using std::string;
