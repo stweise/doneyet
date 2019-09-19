@@ -1,6 +1,6 @@
 #include "date.h"
-#include "utils.h"
 #include "serializer.h"
+#include "utils.h"
 
 Date::Date() { std::time(&time_); }
 

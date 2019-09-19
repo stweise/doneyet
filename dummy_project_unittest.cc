@@ -1,9 +1,7 @@
-#include "gtest/gtest.h"
 #include "dummy_project.h"
+#include "gtest/gtest.h"
 
-TEST(DummyProjectTest, OneIsOne) {
-  EXPECT_EQ(1, 1);
-}
+TEST(DummyProjectTest, OneIsOne) { EXPECT_EQ(1, 1); }
 
 TEST(DummyProjectTest, NamedConstructor) {
   string name = "foo";

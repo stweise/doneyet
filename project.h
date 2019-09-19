@@ -3,10 +3,10 @@
 
 #include <fstream>
 #include <iostream>
-#include <vector>
 #include <ostream>
-#include "task.h"
+#include <vector>
 #include "filter-predicate.h"
+#include "task.h"
 
 using std::ifstream;
 using std::ofstream;

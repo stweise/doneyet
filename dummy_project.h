@@ -8,6 +8,7 @@ class DProject {
  public:
   explicit DProject(string name);
   string getDProjectName();
+
  private:
   string name_;
 };

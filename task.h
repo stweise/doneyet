@@ -9,8 +9,8 @@
 #include <map>
 #include <vector>
 #include "date.h"
-#include "hierarchical-list.h"
 #include "filter-predicate.h"
+#include "hierarchical-list.h"
 
 using std::map;
 using std::ofstream;

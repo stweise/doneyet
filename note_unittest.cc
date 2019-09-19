@@ -1,10 +1,8 @@
-#include "gtest/gtest.h"
 #include "note.h"
+#include "gtest/gtest.h"
 #include "serializer.h"
 
-TEST(NoteTest, OneIsOne) {
-  ASSERT_EQ(1, 1);
-}
+TEST(NoteTest, OneIsOne) { ASSERT_EQ(1, 1); }
 
 TEST(NoteTest, CreateFromStringAndDestroy) {
   string name = "foo";
@@ -28,7 +26,7 @@ TEST(NoteTest, SerializedAndUnSerializedNoteMatchInText) {
   ASSERT_NE(note, nullptr);
   // serialize it
   string serializedFilename = "/tmp/NoteTest.project";
-  Serializer*  s = new Serializer("", serializedFilename);
+  Serializer* s = new Serializer("", serializedFilename);
   note->Serialize(s);
   delete s;
 
@@ -53,7 +51,7 @@ TEST(NoteTest, SerializedAndUnSerializedNoteMatchInTextWithDate) {
 
   // serialize it
   string serializedFilename = "/tmp/NoteTest.project";
-  Serializer*  s = new Serializer("", serializedFilename);
+  Serializer* s = new Serializer("", serializedFilename);
   note->Serialize(s);
   string textWithDate = note->Text();
   delete s;

@@ -1,6 +1,6 @@
 #include "curses-menu.h"
-#include "utils.h"
 #include <stdlib.h>
+#include "utils.h"
 
 Menu::Menu(const string& name, int xloc) {
   name_ = name;

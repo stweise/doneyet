@@ -10,9 +10,9 @@
 #include "file-versions.h"
 #include "info-box.h"
 #include "list-chooser.h"
+#include "project.h"
 #include "serializer.h"
 #include "utils.h"
-#include "project.h"
 
 static bool do_resize;
 

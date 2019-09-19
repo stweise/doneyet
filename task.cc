@@ -1,11 +1,11 @@
 #include "task.h"
-#include "note.h"
 #include <assert.h>
 #include <algorithm>
 #include <string>
 #include "file-versions.h"
-#include "utils.h"
+#include "note.h"
 #include "serializer.h"
+#include "utils.h"
 
 using std::string;
 
